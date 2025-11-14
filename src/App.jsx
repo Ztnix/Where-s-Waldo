@@ -16,24 +16,27 @@ export default function App() {
     {
       title: "Dragon Isle",
       img: img1,
-      items: {
-        1: {
-          img: sonic,
-          coords: [0.338, 0.526],
-        },
-        2: {
-          img: spider,
-          coords: [0.645, 0.842],
-        },
-        3: {
-          img: ash,
-          coords: [0.028, 0.715],
-        },
-      },
     },
     {
       title: "Multiverse Chaos",
       img: img2,
+      items: [
+        {
+          img: sonic,
+          name: "Sonic",
+          coords: [0.338, 0.526],
+        },
+        {
+          img: spider,
+          name: "Spider-Man",
+          coords: [0.645, 0.842],
+        },
+        {
+          img: ash,
+          name: "Ash Ketchum",
+          coords: [0.028, 0.715],
+        },
+      ],
     },
   ];
 

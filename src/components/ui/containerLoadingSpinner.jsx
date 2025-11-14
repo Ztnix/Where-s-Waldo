@@ -1,4 +1,3 @@
-import React from "react";
 export default function ContainerLoadingSpinner() {
   return (
     <div className=" w-full min-h-[400px] inset-0 flex items-center justify-center bg-[#40404047]">
