@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { GameContext } from "../../context/GameContext";
+import { useEffect } from "react";
 
 export default function WelcomeScreen() {
-  const { levels } = useContext(GameContext);
+  const { levels, setLevelSelected } = useContext(GameContext);
+
+  useEffect(() => {
+    setLevelSelected(null);
+  }, [setLevelSelected]);
 
   return (
     <div className="mainContainer flex flex-col items-center pb-8 gap-6 mb-8">
@@ -15,6 +20,7 @@ export default function WelcomeScreen() {
             key={i}
             className="level outline-1 outline-gray-500 rounded-lg w-[300px] h-[450px] inline-block"
             to={`/game/${i}`}
+            onClick={() => setLevelSelected(level)}
           >
             <img
               src={level.img}
